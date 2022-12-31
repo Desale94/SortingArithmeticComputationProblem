@@ -3,7 +3,7 @@ echo "Welcome to Sorting Arithmetic Computation program!!!"
 read -p "Enter first number: " num1
 read -p "Enter second number: " num2
 read -p "Enter third number: " num3
-echo "The given three numbers:"
+echo "The given three numbers:$num1 $num2 $num3"
 
 total1=$(($num1+$num2*$num3))
 echo "$num1+$num2*$num3:$total1"
@@ -18,11 +18,15 @@ total4=$(($num1%$num2+$num3))
 echo "$num1%$num2+$num3:$total4"
 
 declare -A dictionary
+declare -a array
 dictionary[total1]=$total1
 dictionary[total2]=$total2
 dictionary[total3]=$total3
 dictionary[total4]=$total4
+index=0
 for computation in ${!dictionary[@]}
 do 
-    echo "$computation = ${dictionary[$computation]}"
+    array[index++]=${dictionary[$computation]}
 done
+echo "The computation results array is"
+echo ${array[@]}
