@@ -30,3 +30,6 @@ do
 done
 echo "The computation results array is"
 echo ${array[@]}
+
+array=($(printf '%d\n' "${array[@]}"|sort -nr))
+echo "The sorted array is:${array[@]}"
