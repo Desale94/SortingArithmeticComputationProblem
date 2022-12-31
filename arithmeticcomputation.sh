@@ -10,5 +10,3 @@ echo "$num1+$num2*$num3=$total1"
 
 total2=$(($num1*$num2+$num3))
 echo "$num1*$num2+$num3=$total2"
-
-
