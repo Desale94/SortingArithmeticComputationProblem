@@ -5,7 +5,9 @@ read -p "Enter second number: " num2
 read -p "Enter third number: " num3
 
 total1=$(($num1+$num2*$num3))
-echo "$num1+$num2*$num3:$total1"
+echo "$num1+$num2*$num3=$total1"
 
+total2=$(($num1*$num2+$num3))
+echo "$num1*$num2+$num3=$total2"
 
 
