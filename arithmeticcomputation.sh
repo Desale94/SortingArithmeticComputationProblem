@@ -33,3 +33,6 @@ echo ${array[@]}
 
 array=($(printf '%d\n' "${array[@]}"|sort -nr))
 echo "The sorted array is:${array[@]}"
+
+array=($(printf '%d\n' "${array[@]}"|sort -n))
+echo "The sorted array is:${array[@]}"
